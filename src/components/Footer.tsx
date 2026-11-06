@@ -45,6 +45,7 @@ export const Footer: React.FC = () => {
               <li><a href="#cardapio" className="hover:text-white transition-colors py-0.5 inline-block">Cardápio Oficial</a></li>
               <li><a href="#formato-9x25" className="hover:text-white transition-colors py-0.5 inline-block">O Formato 9x25cm</a></li>
               <li><a href="#combos" className="hover:text-white transition-colors py-0.5 inline-block">Combos Promocionais</a></li>
+              <li><a href="#encartes" className="hover:text-[#F59E0B] transition-colors py-0.5 inline-block font-semibold">Encartes Oficiais (Ampliado)</a></li>
               <li><a href="#monte-sua-quadratta" className="hover:text-white transition-colors py-0.5 inline-block">Monte a Sua Pizza</a></li>
               <li><a href="#processo" className="hover:text-white transition-colors py-0.5 inline-block">Nossa Arte Artesanal</a></li>
             </ul>

@@ -6,6 +6,7 @@ import { MenuSection } from './components/MenuSection';
 import { ProductModal } from './components/ProductModal';
 import { PizzaBuilder } from './components/PizzaBuilder';
 import { CombosSection } from './components/CombosSection';
+import { FlyerShowcaseSection } from './components/FlyerShowcaseSection';
 import { ArtisanalProcess } from './components/ArtisanalProcess';
 import { CartDrawer } from './components/CartDrawer';
 import { OrderTrackerModal } from './components/OrderTrackerModal';
@@ -182,6 +183,9 @@ export default function App() {
           onSelectCombo={(item) => setSelectedProduct(item)}
           onQuickAdd={(cartItem) => handleAddToCart(cartItem)}
         />
+
+        {/* Dedicated Space for Enlarged High-Resolution Flyers */}
+        <FlyerShowcaseSection />
 
         {/* Artisanal Process & Stone Oven */}
         <ArtisanalProcess />
