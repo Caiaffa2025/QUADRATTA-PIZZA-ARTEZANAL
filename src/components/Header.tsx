@@ -207,6 +207,7 @@ export const Header: React.FC<HeaderProps> = ({ cart, onOpenCart, onNavigateToBu
                 <span>Monte a Sua Quadratta (Personalizador)</span>
                 <span className="text-[10px] bg-[#CD212A] text-white px-2 py-0.5 rounded uppercase font-bold">Novo</span>
               </button>
+
               <button
                 onClick={() => handleScrollTo('processo')}
                 className="text-left py-2.5 px-3 rounded-lg hover:bg-[#271E18] min-h-[44px] flex items-center transition-colors cursor-pointer"

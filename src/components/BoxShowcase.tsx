@@ -17,7 +17,7 @@ export const BoxShowcase: React.FC<BoxShowcaseProps> = ({ onOrderNow }) => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header with Motion Reveal */}
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export const BoxShowcase: React.FC<BoxShowcaseProps> = ({ onOrderNow }) => {
         {/* 2-Column Showcase */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           
-          {/* Left: Interactive Box Preview with Real Assets */}
+          {/* Left: Interactive Box Preview with Real Assets as before */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -50,7 +50,7 @@ export const BoxShowcase: React.FC<BoxShowcaseProps> = ({ onOrderNow }) => {
             className="lg:col-span-6 space-y-4"
           >
             
-            {/* View Mode Segmented Switch - Full width on mobile, inline on sm+ */}
+            {/* View Mode Segmented Switch */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center sm:justify-start gap-1 p-1 bg-[#1F1915] rounded-xl border border-[#3E3026] w-full sm:w-fit mx-auto lg:mx-0">
               <button
                 onClick={() => setViewMode('open')}
@@ -79,7 +79,7 @@ export const BoxShowcase: React.FC<BoxShowcaseProps> = ({ onOrderNow }) => {
             {/* Visual Box Frame */}
             <div className="relative rounded-2xl bg-[#1D1713] border border-[#3E3026] p-3 sm:p-4 shadow-2xl overflow-hidden group">
               
-              {/* Image Container with smooth transition */}
+              {/* Image Container with smooth transition - as before */}
               <div className="relative aspect-[4/3] w-full rounded-xl overflow-hidden bg-[#14110E]">
                 <AnimatePresence mode="wait">
                   <motion.img
@@ -106,9 +106,9 @@ export const BoxShowcase: React.FC<BoxShowcaseProps> = ({ onOrderNow }) => {
                 <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-[#14110E]/90 backdrop-blur-md px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl border border-[#B07D4F]/50 shadow-lg">
                   <div className="flex items-center gap-1.5 sm:gap-2">
                     <span className="text-[#F59E0B] font-display font-black text-sm sm:text-lg">9 × 25 cm</span>
-                    <span className="text-[10px] sm:text-xs text-[#E6D5C3]">Alongada</span>
+                    <span className="text-[10px] sm:text-xs text-[#E6D5C3]">Formato Alongado</span>
                   </div>
-                  <p className="text-[9px] sm:text-[10px] text-[#A89886]">225 cm² de puro recheio</p>
+                  <p className="text-[9px] sm:text-[10px] text-[#A89886]">225 cm² de recheio generoso</p>
                 </div>
 
                 {/* Italian Flag Ribbon Detail */}
@@ -118,7 +118,7 @@ export const BoxShowcase: React.FC<BoxShowcaseProps> = ({ onOrderNow }) => {
                     <div className="w-1/3 bg-white"></div>
                     <div className="w-1/3 bg-[#CD212A]"></div>
                   </div>
-                  <span className="text-[10px] sm:text-[11px] font-semibold text-[#E6D5C3]">Assada na Pedra</span>
+                  <span className="text-[10px] sm:text-[11px] font-semibold text-[#E6D5C3]">Massa Fininha na Pedra</span>
                 </div>
               </div>
 
@@ -129,7 +129,7 @@ export const BoxShowcase: React.FC<BoxShowcaseProps> = ({ onOrderNow }) => {
                   <span>Papelão Kraft 100% Reciclável</span>
                 </div>
                 <div className="font-mono text-[#C49A6C]">
-                  9cm × 25cm
+                  Largura: 9cm · Comprimento: 25cm
                 </div>
               </div>
 
@@ -156,11 +156,11 @@ export const BoxShowcase: React.FC<BoxShowcaseProps> = ({ onOrderNow }) => {
                   </div>
                   <div>
                     <h3 className="text-sm sm:text-base font-bold text-[#F5F2EB] flex items-center gap-2">
-                      <span>Crocância Uniforme de Ponta a Ponta</span>
+                      <span>Crocância Uniforme da Ponta à Ponta</span>
                       <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#F59E0B]" />
                     </h3>
                     <p className="text-xs sm:text-sm text-[#A89886] mt-1 leading-relaxed">
-                      Em pizzas redondas, o calor e vapor condensam no centro, deixando a massa murcha. O formato 9x25cm garante assamento homogêneo e crocância perfeita em 100% da fatia.
+                      Em pizzas redondas, o calor e vapor condensam no centro, deixando a massa murcha e borrachuda. O formato 9x25cm garante assamento homogêneo e crocância perfeita em 100% da fatia.
                     </p>
                   </div>
                 </div>
@@ -205,8 +205,8 @@ export const BoxShowcase: React.FC<BoxShowcaseProps> = ({ onOrderNow }) => {
                     <h3 className="text-sm sm:text-base font-bold text-[#F5F2EB]">
                       Embalagem Kraft Térmica Prática
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#A89886] mt-1 leading-relaxed">
-                      Encaixa perfeitamente na mesa de jantar, na bandeja do sofá ou na escrivaninha. Abre fácil e mantém o calor por muito mais tempo no delivery.
+                    <p className="text-sm sm:text-sm text-[#A89886] mt-1 leading-relaxed">
+                      Encaixa perfeitamente na mesa de jantar, na bandeja do sofá ou na escrivaninha. Abre fácil, vira prato se desejar e mantém o calor por muito mais tempo no delivery.
                     </p>
                   </div>
                 </div>

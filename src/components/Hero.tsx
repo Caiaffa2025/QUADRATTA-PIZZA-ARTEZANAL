@@ -52,7 +52,7 @@ export const Hero: React.FC<HeroProps> = ({ onOrderClick, onExploreBox, onNaviga
               Uma nova maneira de comer pizza!
             </motion.p>
 
-            {/* Main Headline - Responsive Text Scaling */}
+            {/* Main Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
@@ -100,7 +100,7 @@ export const Hero: React.FC<HeroProps> = ({ onOrderClick, onExploreBox, onNaviga
               </button>
             </motion.div>
 
-            {/* Print 4 Core Pillars Strip - Responsive 2x2 on mobile, 4 in a row on tablet/desktop */}
+            {/* Print 4 Core Pillars Strip */}
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
@@ -150,7 +150,7 @@ export const Hero: React.FC<HeroProps> = ({ onOrderClick, onExploreBox, onNaviga
 
           </div>
 
-          {/* Right Column: Hero Visual Asset with Flyer Media (5 cols) */}
+          {/* Right Column: Hero Visual Asset com a imagem original como era antes */}
           <motion.div
             initial={{ opacity: 0, scale: 0.94, y: 28 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -192,7 +192,7 @@ export const Hero: React.FC<HeroProps> = ({ onOrderClick, onExploreBox, onNaviga
                   {/* Hot baked callout */}
                   <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 bg-[#1C1612]/95 backdrop-blur-md p-2.5 sm:p-3 rounded-xl border border-[#3E3026] flex items-center justify-between gap-2">
                     <div className="min-w-0">
-                      <p className="text-xs font-bold text-[#F5F2EB] truncate">Caixa Kraft Térmica</p>
+                      <p className="text-xs font-bold text-[#F5F2EB] truncate">Caixa Kraft Térmica Quadratta</p>
                       <p className="text-[10px] sm:text-[11px] text-[#C49A6C] truncate">Conserva a crocância sem abafar</p>
                     </div>
                     <button

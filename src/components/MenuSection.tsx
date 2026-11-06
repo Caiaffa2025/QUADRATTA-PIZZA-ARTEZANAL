@@ -18,7 +18,10 @@ const CATEGORIES: { id: CategoryType; label: string }[] = [
   { id: 'bebidas', label: 'Bebidas Geladas' },
 ];
 
-export const MenuSection: React.FC<MenuSectionProps> = ({ onSelectItem, onQuickAdd }) => {
+export const MenuSection: React.FC<MenuSectionProps> = ({
+  onSelectItem,
+  onQuickAdd,
+}) => {
   const [activeCategory, setActiveCategory] = useState<CategoryType>('todos');
   const [searchQuery, setSearchQuery] = useState('');
   const [quickAddedId, setQuickAddedId] = useState<string | null>(null);
@@ -54,7 +57,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onSelectItem, onQuickA
     <section id="cardapio" className="py-12 sm:py-20 bg-[#14110E] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header with Fade-in and Slide-up */}
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -79,7 +82,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onSelectItem, onQuickA
             </p>
           </div>
 
-          {/* Search Input - Full width on mobile, compact on tablet/desktop */}
+          {/* Search Input */}
           <div className="relative w-full md:w-72 shrink-0">
             <Search className="w-4 h-4 text-[#A89886] absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
@@ -92,7 +95,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onSelectItem, onQuickA
           </div>
         </motion.div>
 
-        {/* Category Tabs with Smooth Touch Momentum Scrolling */}
+        {/* Category Tabs */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -115,7 +118,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onSelectItem, onQuickA
           ))}
         </motion.div>
 
-        {/* Products Grid: 1 col on mobile, 2 cols on tablet (md), 3 cols on desktop (lg) */}
+        {/* Products Grid: 1 col on mobile, 2 cols on tablet, 3 cols on desktop */}
         {filteredItems.length === 0 ? (
           <motion.div
             initial={{ opacity: 0 }}
@@ -139,6 +142,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onSelectItem, onQuickA
             <AnimatePresence>
               {filteredItems.map((item, index) => {
                 const isJustAdded = quickAddedId === item.id;
+
                 return (
                   <motion.div
                     key={item.id}
@@ -155,7 +159,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onSelectItem, onQuickA
                     onClick={() => onSelectItem(item)}
                     className="group relative rounded-2xl bg-[#1C1612] border border-[#2E241E] hover:border-[#B07D4F]/60 transition-colors duration-300 shadow-lg hover:shadow-2xl overflow-hidden flex flex-col justify-between cursor-pointer"
                   >
-                    {/* Top Image & Tags */}
+                    {/* Visual Card Image: Original cover presentation as before */}
                     <div>
                       <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#17120F]">
                         <img
@@ -165,13 +169,11 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onSelectItem, onQuickA
                           loading="lazy"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#1C1612] via-transparent to-black/30" />
-
-                        {/* Dimension Tag */}
+                        
                         <div className="absolute top-3 left-3 bg-[#14110E]/90 backdrop-blur-md px-2.5 py-1 rounded-md text-[10px] sm:text-[11px] font-bold text-[#F59E0B] border border-[#B07D4F]/40 shadow-sm">
                           {item.dimensions}
                         </div>
 
-                        {/* Popular / Sweet pill */}
                         {item.isPopular && (
                           <div className="absolute top-3 right-3 bg-[#CD212A] text-white px-2 py-0.5 rounded-md text-[9px] sm:text-[10px] font-extrabold uppercase tracking-wider shadow-sm">
                             Destaque

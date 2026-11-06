@@ -149,7 +149,7 @@ export default function App() {
         onNavigateToBuilder={() => scrollToSection('monte-sua-quadratta')}
       />
 
-      {/* Main Page Flow with Smooth Scroll Entrances */}
+      {/* Main Page Flow with Smooth Scroll Entrances and Original Visuals */}
       <main className="flex-1 w-full overflow-x-hidden">
         {/* Hero Section */}
         <Hero
@@ -159,7 +159,9 @@ export default function App() {
         />
 
         {/* The 9x25cm Box Innovation Showcase */}
-        <BoxShowcase onOrderNow={() => scrollToSection('cardapio')} />
+        <BoxShowcase
+          onOrderNow={() => scrollToSection('cardapio')}
+        />
 
         {/* Official Menu with Flavors from the flyer */}
         <MenuSection
