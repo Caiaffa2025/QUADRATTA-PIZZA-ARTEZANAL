@@ -10,7 +10,7 @@ export const BoxShowcase: React.FC<BoxShowcaseProps> = ({ onOrderNow }) => {
   const [viewMode, setViewMode] = useState<'open' | 'closed'>('open');
 
   return (
-    <section id="formato-9x25" className="py-12 sm:py-20 bg-[#16120F] border-b border-[#2B231D] relative overflow-hidden">
+    <section id="formato-9x25" className="py-12 sm:py-20 bg-[#16120F] border-b border-[#2B231D] relative overflow-hidden scroll-mt-20 sm:scroll-mt-24">
       {/* Decorative background radial pattern */}
       <div className="absolute top-1/2 left-0 w-72 sm:w-96 h-72 sm:h-96 bg-[#B07D4F]/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-72 sm:w-96 h-72 sm:h-96 bg-[#CD212A]/5 rounded-full blur-3xl pointer-events-none" />

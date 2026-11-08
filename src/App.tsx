@@ -115,9 +115,10 @@ export default function App() {
   };
 
   const scrollToSection = (id: string) => {
+    document.body.style.overflow = '';
     const el = document.getElementById(id);
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 

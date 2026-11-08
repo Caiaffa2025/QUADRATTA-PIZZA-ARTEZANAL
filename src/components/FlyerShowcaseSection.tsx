@@ -92,7 +92,7 @@ export const FlyerShowcaseSection: React.FC = () => {
   };
 
   return (
-    <section id="encartes" className="py-14 sm:py-24 bg-[#110D0B] border-y border-[#2B231D] relative overflow-hidden">
+    <section id="encartes" className="py-14 sm:py-24 bg-[#110D0B] border-y border-[#2B231D] relative overflow-hidden scroll-mt-20 sm:scroll-mt-24">
       {/* Decorative ambient background accents */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#B07D4F]/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#CD212A]/5 rounded-full blur-3xl pointer-events-none" />
@@ -197,7 +197,7 @@ export const FlyerShowcaseSection: React.FC = () => {
                       className="px-3 py-1.5 bg-[#B07D4F] hover:bg-[#8A5832] text-white rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 shrink-0 shadow-md cursor-pointer active:scale-95 min-h-[36px]"
                     >
                       <Maximize2 className="w-3.5 h-3.5" />
-                      <span className="hidden xs:inline">Ampliar</span>
+                      <span className="hidden sm:inline">Ampliar</span>
                     </button>
                   </div>
 

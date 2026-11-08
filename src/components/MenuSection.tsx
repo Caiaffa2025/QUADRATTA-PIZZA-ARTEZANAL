@@ -40,6 +40,21 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
     return MENU_ITEMS.filter(item => item.category === catId).length;
   };
 
+  const handleSelectCategory = (catId: CategoryType) => {
+    setActiveCategory(catId);
+    if (searchQuery) {
+      const matchesInNewCat = MENU_ITEMS.filter(
+        item => (catId === 'todos' || item.category === catId) &&
+        (item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+         item.ingredients.some(ing => ing.toLowerCase().includes(searchQuery.toLowerCase())))
+      );
+      if (matchesInNewCat.length === 0) {
+        setSearchQuery('');
+      }
+    }
+  };
+
   const handleQuickAdd = (e: React.MouseEvent, item: MenuItem) => {
     e.stopPropagation();
     const cartItem: CartItem = {
@@ -59,7 +74,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
   };
 
   return (
-    <section id="cardapio" className="py-12 sm:py-20 bg-[#14110E] relative scroll-mt-16">
+    <section id="cardapio" className="py-12 sm:py-20 bg-[#14110E] relative scroll-mt-20 sm:scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header: Optimized for Mobile, Tablet and Desktop */}
@@ -99,6 +114,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
             />
             {searchQuery && (
               <button
+                type="button"
                 onClick={() => setSearchQuery('')}
                 className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-[#8A7B6E] hover:text-white rounded-full hover:bg-[#271E18] transition-colors"
                 aria-label="Limpar busca"
@@ -109,15 +125,9 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
           </div>
         </motion.div>
 
-        {/* Category Tabs: Smooth scroll on Mobile & Tablet, neat layout on Desktop */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="relative mb-6 sm:mb-8"
-        >
-          <div className="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-3 no-scrollbar scroll-smooth -mx-4 px-4 sm:mx-0 sm:px-0">
+        {/* Category Tabs: Sticky bar on Mobile, Tablet & Desktop for instant switching */}
+        <div className="sticky top-16 sm:top-20 z-30 bg-[#14110E]/95 backdrop-blur-md py-3 -mx-4 px-4 sm:mx-0 sm:px-0 border-y border-[#2B231D]/60 mb-6 sm:mb-8 transition-all">
+          <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 no-scrollbar scroll-smooth">
             {CATEGORIES.map((cat) => {
               const isActive = activeCategory === cat.id;
               const count = getCategoryCount(cat.id);
@@ -125,10 +135,11 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
               return (
                 <button
                   key={cat.id}
-                  onClick={() => setActiveCategory(cat.id)}
+                  type="button"
+                  onClick={() => handleSelectCategory(cat.id)}
                   className={`px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap cursor-pointer flex items-center gap-2 active:scale-95 shrink-0 min-h-[42px] sm:min-h-[44px] ${
                     isActive
-                      ? 'bg-[#B07D4F] text-white shadow-md'
+                      ? 'bg-[#B07D4F] text-white shadow-md shadow-[#B07D4F]/20'
                       : 'bg-[#1C1612] text-[#A89886] hover:text-white border border-[#2B231D] hover:border-[#3E3026]'
                   }`}
                 >
@@ -146,7 +157,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
               );
             })}
           </div>
-        </motion.div>
+        </div>
 
         {/* Products Grid: 1 col on mobile, 2 cols on tablet, 3 cols on desktop */}
         {filteredItems.length === 0 ? (
@@ -169,7 +180,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
             </button>
           </motion.div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             <AnimatePresence>
               {filteredItems.map((item, index) => {
                 const isJustAdded = quickAddedId === item.id;

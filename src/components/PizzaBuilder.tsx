@@ -103,7 +103,7 @@ export const PizzaBuilder: React.FC<PizzaBuilderProps> = ({ onAddCustomPizza }) 
   };
 
   return (
-    <section id="monte-sua-quadratta" className="py-12 sm:py-20 bg-[#16120F] border-b border-[#2B231D] relative">
+    <section id="monte-sua-quadratta" className="py-12 sm:py-20 bg-[#16120F] border-b border-[#2B231D] relative scroll-mt-20 sm:scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
