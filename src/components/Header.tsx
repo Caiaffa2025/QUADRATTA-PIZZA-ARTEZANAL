@@ -48,32 +48,34 @@ export const Header: React.FC<HeaderProps> = ({ cart, onOpenCart, onNavigateToBu
     };
   }, [mobileMenuOpen]);
 
-  // Lock background scroll when drawer is open, unlock on unmount
+  // Lock background scroll when drawer is open, unlock on unmount (rAF deferred to prevent layout freeze)
   useEffect(() => {
     if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
+      const rafId = requestAnimationFrame(() => {
+        document.body.style.overflow = 'hidden';
+      });
+      return () => {
+        cancelAnimationFrame(rafId);
+        document.body.style.overflow = '';
+      };
     } else {
       document.body.style.overflow = '';
     }
-    return () => {
-      document.body.style.overflow = '';
-    };
   }, [mobileMenuOpen]);
 
   const handleScrollTo = (targetId: string) => {
-    document.body.style.overflow = '';
     setMobileMenuOpen(false);
 
     const resolvedId = targetId === 'builder' ? 'monte-sua-quadratta' : targetId;
 
-    setTimeout(() => {
+    requestAnimationFrame(() => {
       const element = document.getElementById(resolvedId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       } else {
         window.location.hash = resolvedId;
       }
-    }, 60);
+    });
   };
 
   const navLinks = [
@@ -230,16 +232,17 @@ export const Header: React.FC<HeaderProps> = ({ cart, onOpenCart, onNavigateToBu
               )}
             </button>
 
-            {/* Mobile and Tablet Menu Toggle (Touch Target >= 44px) */}
+            {/* Mobile and Tablet Menu Toggle (Touch Target >= 44px, immediate touch-action) */}
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="lg:hidden p-2.5 text-[#E6D5C3] hover:text-white focus:outline-none min-w-[44px] min-h-[44px] flex items-center justify-center gap-1.5 rounded-xl bg-[#1C1612] hover:bg-[#271E18] border border-[#2E241E] cursor-pointer active:scale-95 transition-all shadow-sm"
+              style={{ touchAction: 'manipulation' }}
+              className="lg:hidden p-2.5 text-[#E6D5C3] hover:text-white active:text-white focus:outline-none min-w-[44px] min-h-[44px] flex items-center justify-center gap-1.5 rounded-xl bg-[#1C1612] hover:bg-[#271E18] active:bg-[#34271E] border border-[#2E241E] active:border-[#B07D4F]/60 cursor-pointer active:scale-95 transition-transform duration-75 shadow-sm select-none"
               aria-label="Abrir menu de navegação"
               aria-expanded={mobileMenuOpen}
             >
-              <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
-              <span className="text-xs font-bold hidden sm:inline text-[#C49A6C]">Menu</span>
+              <Menu className="w-5 h-5 sm:w-6 sm:h-6 pointer-events-none" />
+              <span className="text-xs font-bold hidden sm:inline text-[#C49A6C] pointer-events-none">Menu</span>
             </button>
           </div>
         </div>
@@ -249,25 +252,23 @@ export const Header: React.FC<HeaderProps> = ({ cart, onOpenCart, onNavigateToBu
       <AnimatePresence>
         {mobileMenuOpen && (
           <div className="fixed inset-0 z-50 lg:hidden overflow-hidden">
-            {/* Backdrop Blur Overlay */}
+            {/* High-performance Backdrop Overlay (crisp bg-black/80 without GPU blur stalls) */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              onClick={() => {
-                document.body.style.overflow = '';
-                setMobileMenuOpen(false);
-              }}
-              className="fixed inset-0 bg-black/85 backdrop-blur-sm cursor-pointer"
+              transition={{ duration: 0.15, ease: 'easeOut' }}
+              onClick={() => setMobileMenuOpen(false)}
+              className="fixed inset-0 bg-black/80 cursor-pointer"
             />
 
-            {/* Slide-in Sheet from Right */}
+            {/* Snappy Hardware-Accelerated Slide-in Sheet from Right */}
             <motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-              transition={{ type: 'spring', damping: 26, stiffness: 240 }}
+              transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+              style={{ willChange: 'transform' }}
               className="fixed top-0 right-0 bottom-0 w-full max-w-sm sm:max-w-md bg-[#16120E] border-l border-[#2E241E] flex flex-col shadow-2xl z-10"
             >
               {/* Drawer Top Header */}
@@ -288,14 +289,12 @@ export const Header: React.FC<HeaderProps> = ({ cart, onOpenCart, onNavigateToBu
 
                 <button
                   type="button"
-                  onClick={() => {
-                    document.body.style.overflow = '';
-                    setMobileMenuOpen(false);
-                  }}
-                  className="p-2 rounded-xl text-[#A89886] hover:text-white bg-[#221A15] border border-[#2E241E] cursor-pointer min-w-[42px] min-h-[42px] flex items-center justify-center active:scale-95 transition-all"
+                  onClick={() => setMobileMenuOpen(false)}
+                  style={{ touchAction: 'manipulation' }}
+                  className="p-2 rounded-xl text-[#A89886] hover:text-white bg-[#221A15] active:bg-[#2F231C] border border-[#2E241E] cursor-pointer min-w-[42px] min-h-[42px] flex items-center justify-center active:scale-95 transition-transform duration-75 select-none"
                   aria-label="Fechar menu"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-5 h-5 pointer-events-none" />
                 </button>
               </div>
 
