@@ -18,7 +18,7 @@ const STAGES = [
   { id: 1, title: 'Pedido Recebido', desc: 'Comanda confirmada e enviada para o pizzaiolo', icon: CheckCircle2 },
   { id: 2, title: 'Abrindo Massa & Recheio', desc: 'Massa fininha 48h aberta e recheada fartamente', icon: Sparkles },
   { id: 3, title: 'No Forno na Pedra', desc: 'Assando a alta temperatura na pedra quente', icon: Flame },
-  { id: 4, title: 'Embalado na Caixa Kraft', desc: 'Acomodada na caixa térmica 9x25cm exclusiva', icon: Package },
+  { id: 4, title: 'Embalado na Caixa Kraft', desc: 'Acomodada na caixa térmica 10x25cm exclusiva', icon: Package },
   { id: 5, title: 'Saiu para Entrega', desc: 'Motoboy a caminho da Vila Andrade / Morumbi', icon: Bike },
 ];
 

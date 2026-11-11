@@ -10,7 +10,7 @@ export const BoxShowcase: React.FC<BoxShowcaseProps> = ({ onOrderNow }) => {
   const [viewMode, setViewMode] = useState<'open' | 'closed'>('open');
 
   return (
-    <section id="formato-9x25" className="py-12 sm:py-20 bg-[#16120F] border-b border-[#2B231D] relative overflow-hidden scroll-mt-20 sm:scroll-mt-24">
+    <section id="formato-10x25" className="py-12 sm:py-20 bg-[#16120F] border-b border-[#2B231D] relative overflow-hidden scroll-mt-20 sm:scroll-mt-24">
       {/* Decorative background radial pattern */}
       <div className="absolute top-1/2 left-0 w-72 sm:w-96 h-72 sm:h-96 bg-[#B07D4F]/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-72 sm:w-96 h-72 sm:h-96 bg-[#CD212A]/5 rounded-full blur-3xl pointer-events-none" />
@@ -31,7 +31,7 @@ export const BoxShowcase: React.FC<BoxShowcaseProps> = ({ onOrderNow }) => {
             <span>Design da Embalagem</span>
           </div>
           <h2 className="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-[#F5F2EB] tracking-tight text-balance">
-            Por que uma pizza alongada de <span className="text-[#F59E0B]">9 x 25 cm</span>?
+            Por que uma pizza alongada de <span className="text-[#F59E0B]">10 x 25 cm</span>?
           </h2>
           <p className="text-[#A89886] text-xs sm:text-sm lg:text-base leading-relaxed">
             Esqueça as caixas redondas gigantescas que amolecem a massa com vapor retido. Criamos a Quadratta para ser a experiência definitiva de pizza individual artesanal.
@@ -95,8 +95,8 @@ export const BoxShowcase: React.FC<BoxShowcaseProps> = ({ onOrderNow }) => {
                     }
                     alt={
                       viewMode === 'open'
-                        ? 'Pizza artesanal Quadratta aberta na caixa 9x25cm'
-                        : 'Caixa kraft exclusiva Quadratta 9x25cm'
+                        ? 'Pizza artesanal Quadratta aberta na caixa 10x25cm'
+                        : 'Caixa kraft exclusiva Quadratta 10x25cm'
                     }
                     className="w-full h-full object-cover object-center"
                   />
@@ -105,10 +105,10 @@ export const BoxShowcase: React.FC<BoxShowcaseProps> = ({ onOrderNow }) => {
                 {/* Dimension Floating Label Overlay */}
                 <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-[#14110E]/90 backdrop-blur-md px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl border border-[#B07D4F]/50 shadow-lg">
                   <div className="flex items-center gap-1.5 sm:gap-2">
-                    <span className="text-[#F59E0B] font-display font-black text-sm sm:text-lg">9 × 25 cm</span>
+                    <span className="text-[#F59E0B] font-display font-black text-sm sm:text-lg">10 × 25 cm</span>
                     <span className="text-[10px] sm:text-xs text-[#E6D5C3]">Formato Alongado</span>
                   </div>
-                  <p className="text-[9px] sm:text-[10px] text-[#A89886]">225 cm² de recheio generoso</p>
+                  <p className="text-[9px] sm:text-[10px] text-[#A89886]">250 cm² de recheio generoso</p>
                 </div>
 
                 {/* Italian Flag Ribbon Detail */}
@@ -129,7 +129,7 @@ export const BoxShowcase: React.FC<BoxShowcaseProps> = ({ onOrderNow }) => {
                   <span>Papelão Kraft 100% Reciclável</span>
                 </div>
                 <div className="font-mono text-[#C49A6C]">
-                  Largura: 9cm · Comprimento: 25cm
+                  Largura: 10cm · Comprimento: 25cm
                 </div>
               </div>
 
@@ -160,7 +160,7 @@ export const BoxShowcase: React.FC<BoxShowcaseProps> = ({ onOrderNow }) => {
                       <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#F59E0B]" />
                     </h3>
                     <p className="text-xs sm:text-sm text-[#A89886] mt-1 leading-relaxed">
-                      Em pizzas redondas, o calor e vapor condensam no centro, deixando a massa murcha e borrachuda. O formato 9x25cm garante assamento homogêneo e crocância perfeita em 100% da fatia.
+                      Em pizzas redondas, o calor e vapor condensam no centro, deixando a massa murcha e borrachuda. O formato 10x25cm garante assamento homogêneo e crocância perfeita em 100% da fatia.
                     </p>
                   </div>
                 </div>
@@ -249,7 +249,7 @@ export const BoxShowcase: React.FC<BoxShowcaseProps> = ({ onOrderNow }) => {
                 onClick={onOrderNow}
                 className="w-full sm:w-auto px-6 py-3.5 bg-[#B07D4F] hover:bg-[#8A5832] text-white font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer active:scale-98 min-h-[48px] text-sm"
               >
-                <span>Experimentar uma Quadratta 9x25cm</span>
+                <span>Experimentar uma Quadratta 10x25cm</span>
               </button>
             </motion.div>
 

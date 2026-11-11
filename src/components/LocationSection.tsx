@@ -8,8 +8,8 @@ export const LocationSection: React.FC = () => {
 
   const faqs = [
     {
-      q: 'O que significa pizza individual alongada de 9 x 25 cm?',
-      a: 'É um formato retangular exclusivo (225 cm²) criado para saciar com perfeição uma pessoa. Diferente da pizza redonda comum, a Quadratta é assada de ponta a ponta uniformemente e cabe na mão com total conforto sem desmoronar.'
+      q: 'O que significa pizza individual alongada de 10 x 25 cm?',
+      a: 'É um formato retangular exclusivo (250 cm²) criado para saciar com perfeição uma pessoa. Diferente da pizza redonda comum, a Quadratta é assada de ponta a ponta uniformemente e cabe na mão com total conforto sem desmoronar.'
     },
     {
       q: 'A pizza chega crocante no delivery ou fica úmida na caixa?',

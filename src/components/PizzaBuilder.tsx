@@ -64,7 +64,7 @@ export const PizzaBuilder: React.FC<PizzaBuilderProps> = ({ onAddCustomPizza }) 
       setSelectedToppings(selectedToppings.filter(t => t !== toppingId));
     } else {
       if (selectedToppings.length >= 4) {
-        alert('Você pode escolher no máximo 4 recheios para manter a crocância ideal da pizza de 9x25cm!');
+        alert('Você pode escolher no máximo 4 recheios para manter a crocância ideal da pizza de 10x25cm!');
         return;
       }
       setSelectedToppings([...selectedToppings, toppingId]);
@@ -78,12 +78,12 @@ export const PizzaBuilder: React.FC<PizzaBuilderProps> = ({ onAddCustomPizza }) 
 
     const customMenuItem: MenuItem = {
       id: `custom-${Date.now()}`,
-      name: customName || 'Quadratta Personalizada 9x25cm',
+      name: customName || 'Quadratta Personalizada 10x25cm',
       tagline: 'Criada exclusivamente por você!',
       description: `${selectedCrust.name}, ${selectedBorder.name}, ${selectedSauce.name}, ${selectedCheese.name}. Recheios: ${toppingNames.join(', ')}.`,
       price: currentTotal,
       category: 'especiais',
-      dimensions: '9 x 25 cm',
+      dimensions: '10 x 25 cm',
       image: '/assets/aistudio/IMG_1457_43f83bca.png',
       ingredients: toppingNames,
     };
@@ -118,19 +118,19 @@ export const PizzaBuilder: React.FC<PizzaBuilderProps> = ({ onAddCustomPizza }) 
             <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" />
             <span>Monte do Seu Jeito</span>
             <span>·</span>
-            <span>Formato 9 x 25 cm</span>
+            <span>Formato 10 x 25 cm</span>
           </div>
           <h2 className="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-[#F5F2EB] tracking-tight text-balance">
             Personalizador de <span className="text-[#F59E0B]">Quadratta</span> Artesanal
           </h2>
           <p className="text-[#A89886] text-xs sm:text-sm lg:text-base leading-relaxed">
-            Escolha sua massa, molho, queijo e até 4 recheios nobres para criar sua pizza individual 9x25cm perfeita.
+            Escolha sua massa, molho, queijo e até 4 recheios nobres para criar sua pizza individual 10x25cm perfeita.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           
-          {/* Left Column: Interactive Visual 9x25cm Canvas Preview (5 cols) - sticky ONLY on desktop */}
+          {/* Left Column: Interactive Visual 10x25cm Canvas Preview (5 cols) - sticky ONLY on desktop */}
           <motion.div
             initial={{ opacity: 0, x: -25 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -145,7 +145,7 @@ export const PizzaBuilder: React.FC<PizzaBuilderProps> = ({ onAddCustomPizza }) 
                   <h3 className="font-display font-bold text-base sm:text-lg text-[#F5F2EB]">
                     Prévia da sua Quadratta
                   </h3>
-                  <p className="text-[11px] sm:text-xs text-[#C49A6C]">Tamanho real: 9 x 25 cm</p>
+                  <p className="text-[11px] sm:text-xs text-[#C49A6C]">Tamanho real: 10 x 25 cm</p>
                 </div>
                 <div className="text-right">
                   <span className="text-[9px] sm:text-[10px] text-[#A89886] uppercase block">Valor Total</span>
@@ -158,9 +158,9 @@ export const PizzaBuilder: React.FC<PizzaBuilderProps> = ({ onAddCustomPizza }) 
               {/* The Elongated Pizza Visualizer Box */}
               <div className="relative py-4 sm:py-6 px-2 sm:px-4 bg-[#120F0D] rounded-xl border border-[#2E241E] flex flex-col items-center justify-center">
                 
-                {/* 9 x 25 cm Scale Indicator */}
+                {/* 10 x 25 cm Scale Indicator */}
                 <div className="w-full flex justify-between text-[10px] sm:text-[11px] font-mono text-[#A89886] pb-2 px-2 sm:px-6">
-                  <span>← 9 cm →</span>
+                  <span>← 10 cm →</span>
                   <span>← 25 cm comprimento →</span>
                 </div>
 

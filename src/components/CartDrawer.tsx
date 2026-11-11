@@ -177,7 +177,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
               </div>
               <h4 className="font-display font-bold text-base sm:text-lg text-[#E6D5C3]">Sua sacola está vazia</h4>
               <p className="text-xs text-[#8A7B6E] max-w-xs mx-auto">
-                Explore nosso cardápio e adicione sua pizza individual alongada 9x25cm feita na hora!
+                Explore nosso cardápio e adicione sua pizza individual alongada 10x25cm feita na hora!
               </p>
               <button
                 onClick={onClose}

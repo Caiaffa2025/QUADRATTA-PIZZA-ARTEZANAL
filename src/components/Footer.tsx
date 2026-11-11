@@ -34,7 +34,7 @@ export const Footer: React.FC = () => {
               Uma nova maneira de comer pizza!
             </p>
             <p className="text-xs text-[#8A7B6E] max-w-sm leading-relaxed">
-              Pizzas artesanais individuais alongadas de 9 x 25 cm. Massa fininha, fermentação 48h, recheio generoso e assada na pedra na hora do pedido.
+              Pizzas artesanais individuais alongadas de 10 x 25 cm. Massa fininha, fermentação 48h, recheio generoso e assada na pedra na hora do pedido.
             </p>
           </div>
 
@@ -42,8 +42,9 @@ export const Footer: React.FC = () => {
           <div className="space-y-2.5">
             <h4 className="text-xs font-bold uppercase tracking-wider text-[#E6D5C3]">Navegação</h4>
             <ul className="space-y-2 text-xs">
+              <li><a href="#quem-somos" className="text-[#F59E0B] hover:text-[#FBBF24] transition-colors py-0.5 inline-block font-semibold">Quem Somos (Nossa História)</a></li>
               <li><a href="#cardapio" className="hover:text-white transition-colors py-0.5 inline-block">Cardápio Oficial</a></li>
-              <li><a href="#formato-9x25" className="hover:text-white transition-colors py-0.5 inline-block">O Formato 9x25cm</a></li>
+              <li><a href="#formato-10x25" className="hover:text-white transition-colors py-0.5 inline-block">O Formato 10x25cm</a></li>
               <li><a href="#combos" className="hover:text-white transition-colors py-0.5 inline-block">Combos Promocionais</a></li>
               <li><a href="#encartes" className="hover:text-[#F59E0B] transition-colors py-0.5 inline-block font-semibold">Encartes Oficiais (Ampliado)</a></li>
               <li><a href="#monte-sua-quadratta" className="hover:text-white transition-colors py-0.5 inline-block">Monte a Sua Pizza</a></li>
@@ -80,7 +81,7 @@ export const Footer: React.FC = () => {
         <div className="pt-6 border-t border-[#1C1612] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] sm:text-xs text-[#6B5A4E]">
           <p className="text-center sm:text-left">© {new Date().getFullYear()} Quadratta Pizza Artesanal. Todos os direitos reservados.</p>
           <div className="flex items-center gap-4">
-            <span className="hidden sm:inline">9 x 25 cm · Feita com paixão</span>
+            <span className="hidden sm:inline">10 x 25 cm · Feita com paixão</span>
             <button
               onClick={scrollToTop}
               className="p-2 rounded-lg bg-[#1C1612] hover:bg-[#271E18] text-[#A89886] hover:text-white transition-colors min-w-[36px] min-h-[36px] flex items-center justify-center cursor-pointer"

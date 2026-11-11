@@ -1,6 +1,6 @@
 {
   "name": "Quadratta - Pizza Artesanal",
-  "description": "Uma nova maneira de comer pizza! Pizzas individuais alongadas 9x25cm, massa fininha artesanal, recheio generoso e delivery rápido para Vila Andrade e Morumbi.",
+  "description": "Uma nova maneira de comer pizza! Pizzas individuais alongadas 10x25cm, massa fininha artesanal, recheio generoso e delivery rápido para Vila Andrade e Morumbi.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ShoppingBag, Phone, Menu, X, MapPin, Pizza, Sparkles, Package, Flame, FileText, ChevronRight, Clock } from 'lucide-react';
+import { ShoppingBag, Phone, Menu, X, MapPin, Pizza, Sparkles, Package, Flame, FileText, ChevronRight, Clock, Users } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CartItem } from '../types';
 
@@ -19,7 +19,7 @@ export const Header: React.FC<HeaderProps> = ({ cart, onOpenCart, onNavigateToBu
   // Scroll spy to highlight active section in navbar and drawer
   useEffect(() => {
     const handleScroll = () => {
-      const sectionIds = ['cardapio', 'formato-9x25', 'combos', 'monte-sua-quadratta', 'encartes', 'processo', 'localizacao'];
+      const sectionIds = ['quem-somos', 'formato-10x25', 'cardapio', 'combos', 'monte-sua-quadratta', 'encartes', 'processo', 'localizacao'];
       const scrollPos = window.scrollY + 140;
       for (let i = sectionIds.length - 1; i >= 0; i--) {
         const el = document.getElementById(sectionIds[i]);
@@ -79,8 +79,9 @@ export const Header: React.FC<HeaderProps> = ({ cart, onOpenCart, onNavigateToBu
   };
 
   const navLinks = [
+    { id: 'quem-somos', label: 'Quem Somos', shortLabel: 'Quem Somos', icon: Users, badge: 'História' },
     { id: 'cardapio', label: 'Cardápio', shortLabel: 'Cardápio', icon: Pizza, badge: '6 Sabores' },
-    { id: 'formato-9x25', label: 'O Formato 9x25cm', shortLabel: 'Formato 9x25', icon: Package },
+    { id: 'formato-10x25', label: 'O Formato 10x25cm', shortLabel: 'Formato 10x25', icon: Package },
     { id: 'combos', label: 'Combos', shortLabel: 'Combos', icon: Sparkles, badge: 'Econômico' },
     { id: 'monte-sua-quadratta', label: 'Monte a Sua', shortLabel: 'Monte a Sua', isBuilder: true, icon: Sparkles, badge: 'Novo', highlight: true },
     { id: 'encartes', label: 'Encartes', shortLabel: 'Encartes', icon: FileText, badge: 'Ampliado', highlightGold: true },
@@ -152,7 +153,7 @@ export const Header: React.FC<HeaderProps> = ({ cart, onOpenCart, onNavigateToBu
               <div className="flex items-center gap-1 text-[8px] sm:text-[11px] uppercase tracking-wider text-[#C49A6C] font-semibold mt-0.5">
                 <span>Pizza Artesanal</span>
                 <span className="text-[#8A5832]">·</span>
-                <span className="text-[#A89886] font-normal">9x25 cm</span>
+                <span className="text-[#A89886] font-normal">10x25 cm</span>
               </div>
             </div>
           </a>
@@ -339,11 +340,14 @@ export const Header: React.FC<HeaderProps> = ({ cart, onOpenCart, onNavigateToBu
                           <span className={`text-sm block truncate ${isActive ? 'font-bold text-[#F59E0B]' : 'font-semibold'}`}>
                             {item.label}
                           </span>
+                          {item.id === 'quem-somos' && (
+                            <span className="text-[10px] text-[#A89886] block">Nossa história & paixão artesanal</span>
+                          )}
                           {item.id === 'encartes' && (
                             <span className="text-[10px] text-[#A89886] block">Visualização em alta resolução</span>
                           )}
                           {item.id === 'cardapio' && (
-                            <span className="text-[10px] text-[#A89886] block">Pizzas individuais 9x25 cm</span>
+                            <span className="text-[10px] text-[#A89886] block">Pizzas individuais 10x25 cm</span>
                           )}
                         </div>
                       </div>

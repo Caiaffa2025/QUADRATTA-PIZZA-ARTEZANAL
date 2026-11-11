@@ -104,7 +104,7 @@ export const ArtisanalProcess: React.FC = () => {
               Caixa Kraft Eco-Térmica
             </h3>
             <p className="text-xs text-[#A89886] leading-relaxed">
-              Desenvolvida sob medida nas dimensões 9 x 25 cm para conservar a temperatura sem condensar umidade. Chega crocante e quentinha na sua porta.
+              Desenvolvida sob medida nas dimensões 10 x 25 cm para conservar a temperatura sem condensar umidade. Chega crocante e quentinha na sua porta.
             </p>
           </motion.div>
 

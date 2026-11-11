@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { BoxShowcase } from './components/BoxShowcase';
+import { AboutUsSection } from './components/AboutUsSection';
 import { MenuSection } from './components/MenuSection';
 import { ProductModal } from './components/ProductModal';
 import { PizzaBuilder } from './components/PizzaBuilder';
@@ -156,13 +157,18 @@ export default function App() {
         {/* Hero Section */}
         <Hero
           onOrderClick={() => scrollToSection('cardapio')}
-          onExploreBox={() => scrollToSection('formato-9x25')}
+          onExploreBox={() => scrollToSection('formato-10x25')}
           onNavigateToBuilder={() => scrollToSection('monte-sua-quadratta')}
         />
 
-        {/* The 9x25cm Box Innovation Showcase */}
+        {/* The 10x25cm Box Innovation Showcase */}
         <BoxShowcase
           onOrderNow={() => scrollToSection('cardapio')}
+        />
+
+        {/* Quem Somos - A História e Propósito da Quadratta */}
+        <AboutUsSection
+          onExploreMenu={() => scrollToSection('cardapio')}
         />
 
         {/* Official Menu with Flavors from the flyer */}

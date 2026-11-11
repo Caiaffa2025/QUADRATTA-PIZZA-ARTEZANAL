@@ -19,7 +19,7 @@ export interface MenuItem {
   description: string;
   price: number;
   category: CategoryType;
-  dimensions: string; // e.g. "9 x 25 cm"
+  dimensions: string; // e.g. "10 x 25 cm"
   image: string;
   isPopular?: boolean;
   isVegetarian?: boolean;

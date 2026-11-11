@@ -36,7 +36,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Molho rústico artesanal de tomates selecionados, camada generosa de mussarela derretida no ponto perfeito, fatias de tomate fresco, azeitonas pretas e orégano.',
     price: 28.90,
     category: 'salgadas',
-    dimensions: '9 x 25 cm',
+    dimensions: '10 x 25 cm',
     image: '/assets/aistudio/IMG_1457_43f83bca.png',
     isPopular: true,
     isVegetarian: true,
@@ -49,7 +49,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Fatias finas e crocantes de linguiça calabresa defumada de primeira linha, base suave de queijo, cebola fininha fatiada e orégano fresco sobre massa artesanal.',
     price: 30.90,
     category: 'salgadas',
-    dimensions: '9 x 25 cm',
+    dimensions: '10 x 25 cm',
     image: '/assets/aistudio/IMG_1458_04ba9bba.jpeg',
     isPopular: true,
     ingredients: ['Calabresa defumada', 'Mussarela suave', 'Cebola fininha', 'Molho rústico', 'Orégano']
@@ -61,7 +61,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Frango desfiado suculento temperado com ervas da horta, base de queijo derretido e generosos fios de requeijão cremoso tipo Catupiry, assada na hora.',
     price: 32.90,
     category: 'salgadas',
-    dimensions: '9 x 25 cm',
+    dimensions: '10 x 25 cm',
     image: '/assets/aistudio/IMG_1457_43f83bca.png',
     isPopular: true,
     ingredients: ['Frango desfiado', 'Requeijão Catupiry', 'Mussarela', 'Molho artesanal', 'Milho']
@@ -73,7 +73,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'A combinação que nunca erra: fatias de presunto cozido magro selecionado com mussarela borbulhante e toque suave de azeite extravirgem e orégano.',
     price: 29.90,
     category: 'salgadas',
-    dimensions: '9 x 25 cm',
+    dimensions: '10 x 25 cm',
     image: '/assets/aistudio/IMG_1458_04ba9bba.jpeg',
     ingredients: ['Presunto magro', 'Mussarela derretida', 'Molho de tomate', 'Orégano']
   },
@@ -84,7 +84,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Cubos generosos de bacon defumado crocante, milho verde tenro e mussarela derretida cobrindo toda a extensão da pizza alongada.',
     price: 33.90,
     category: 'salgadas',
-    dimensions: '9 x 25 cm',
+    dimensions: '10 x 25 cm',
     image: '/assets/aistudio/IMG_1457_43f83bca.png',
     isPopular: true,
     ingredients: ['Bacon crocante', 'Milho tenro', 'Mussarela', 'Molho rústico', 'Orégano']
@@ -96,7 +96,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Ganache nobre de chocolate ao leite aveludado, derretido sobre a massa fininha e crocante, coberto com granulado crocante artesanal. Sobremesa perfeita!',
     price: 31.90,
     category: 'doces',
-    dimensions: '9 x 25 cm',
+    dimensions: '10 x 25 cm',
     image: '/assets/aistudio/IMG_1458_04ba9bba.jpeg',
     isPopular: true,
     isSweet: true,
@@ -111,7 +111,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Mussarela de búfala fresca, rodelas selecionadas de tomate caqui, molho de tomate San Marzano da casa, folhas inteiras de manjericão fresco e azeite extravirgem.',
     price: 33.90,
     category: 'especiais',
-    dimensions: '9 x 25 cm',
+    dimensions: '10 x 25 cm',
     image: '/assets/aistudio/IMG_1457_43f83bca.png',
     isVegetarian: true,
     ingredients: ['Mussarela de búfala', 'Tomates caqui', 'Manjericão fresco', 'Azeite extravirgem', 'Molho artesanal']
@@ -123,7 +123,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Blend harmonioso de queijos finos: mussarela artesanal, provolone defumado, gorgonzola cremoso e parmesão curado gratinado na pedra quente.',
     price: 35.90,
     category: 'especiais',
-    dimensions: '9 x 25 cm',
+    dimensions: '10 x 25 cm',
     image: '/assets/aistudio/IMG_1457_43f83bca.png',
     isVegetarian: true,
     ingredients: ['Mussarela', 'Provolone defumado', 'Gorgonzola', 'Parmesão curado']
@@ -135,7 +135,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Doce de leite cremoso artesanal, fatias de banana fresca caramelizadas com açúcar cristal e canela perfumada sobre a massa fininha.',
     price: 30.90,
     category: 'doces',
-    dimensions: '9 x 25 cm',
+    dimensions: '10 x 25 cm',
     image: '/assets/aistudio/IMG_1458_04ba9bba.jpeg',
     isSweet: true,
     ingredients: ['Doce de leite artesanal', 'Banana fatiada', 'Canela em pó', 'Açúcar cristal']
@@ -145,14 +145,14 @@ export const MENU_ITEMS: MenuItem[] = [
   {
     id: 'combo-individual',
     name: 'Combo Individual Quadratta',
-    tagline: '1 Pizza Alongada 9x25cm + 1 Bebida Gelada',
-    description: 'A refeição perfeita para um momento só seu: escolha 1 sabor salgado de 9x25cm + 1 lata de refrigerante ou suco gelado.',
+    tagline: '1 Pizza Alongada 10x25cm + 1 Bebida Gelada',
+    description: 'A refeição perfeita para um momento só seu: escolha 1 sabor salgado de 10x25cm + 1 lata de refrigerante ou suco gelado.',
     price: 35.90,
     category: 'combos',
-    dimensions: '1 Pizza 9x25cm + Bebida',
+    dimensions: '1 Pizza 10x25cm + Bebida',
     image: '/assets/aistudio/IMG_1457_43f83bca.png',
     isPopular: true,
-    ingredients: ['1 Pizza individual 9x25cm', '1 Bebida lata 350ml', 'Embalagem térmica individual']
+    ingredients: ['1 Pizza individual 10x25cm', '1 Bebida lata 350ml', 'Embalagem térmica individual']
   },
   {
     id: 'combo-duo',
@@ -161,21 +161,21 @@ export const MENU_ITEMS: MenuItem[] = [
     description: '2 Pizzas Alongadas Salgadas à sua escolha + 1 Pizza Alongada de Sobremesa (Chocolate ou Doce de Leite). Serve 2 pessoas fartamente.',
     price: 79.90,
     category: 'combos',
-    dimensions: '3 Pizzas 9x25cm',
+    dimensions: '3 Pizzas 10x25cm',
     image: '/assets/aistudio/IMG_1458_04ba9bba.jpeg',
     isPopular: true,
-    ingredients: ['2 Pizzas salgadas 9x25cm', '1 Pizza doce 9x25cm', '3 Caixas kraft térmicas']
+    ingredients: ['2 Pizzas salgadas 10x25cm', '1 Pizza doce 10x25cm', '3 Caixas kraft térmicas']
   },
   {
     id: 'combo-familia',
     name: 'Combo Família & Galera (4 Pizzas)',
     tagline: '4 Pizzas Alongadas + 2 Bebidas + Entrega Grátis!',
-    description: 'Cada um pede seu sabor favorito sem briga! 4 Pizzas 9x25cm personalizadas + 2 refrigerantes lata + entrega grátis em toda Vila Andrade e Morumbi.',
+    description: 'Cada um pede seu sabor favorito sem briga! 4 Pizzas 10x25cm personalizadas + 2 refrigerantes lata + entrega grátis em toda Vila Andrade e Morumbi.',
     price: 129.90,
     category: 'combos',
-    dimensions: '4 Pizzas 9x25cm + 2 Bebidas',
+    dimensions: '4 Pizzas 10x25cm + 2 Bebidas',
     image: '/assets/aistudio/IMG_1457_43f83bca.png',
-    ingredients: ['4 Pizzas individuais 9x25cm', '2 Bebidas', 'Entrega grátis']
+    ingredients: ['4 Pizzas individuais 10x25cm', '2 Bebidas', 'Entrega grátis']
   },
 
   // Bebidas

@@ -61,7 +61,7 @@ export const Hero: React.FC<HeroProps> = ({ onOrderClick, onExploreBox, onNaviga
             >
               Pizza individual{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F59E0B] via-[#EAB308] to-[#C49A6C]">
-                alongada 9x25cm
+                alongada 10x25cm
               </span>
               , assada na hora para você.
             </motion.h1>
@@ -176,7 +176,7 @@ export const Hero: React.FC<HeroProps> = ({ onOrderClick, onExploreBox, onNaviga
                 <div className="relative h-64 sm:h-80 md:h-96 w-full bg-[#181310] overflow-hidden group">
                   <img
                     src="/assets/aistudio/IMG_1457_43f83bca.png"
-                    alt="Quadratta Pizza Artesanal 9x25cm na caixa exclusiva"
+                    alt="Quadratta Pizza Artesanal 10x25cm na caixa exclusiva"
                     className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
                   
@@ -185,7 +185,7 @@ export const Hero: React.FC<HeroProps> = ({ onOrderClick, onExploreBox, onNaviga
 
                   {/* Dimension pill overlay */}
                   <div className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-[#14110E]/90 backdrop-blur-md border border-[#B07D4F]/60 text-white px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg shadow-lg flex items-center gap-1.5">
-                    <span className="text-xs font-bold text-[#F59E0B]">9 × 25 cm</span>
+                    <span className="text-xs font-bold text-[#F59E0B]">10 × 25 cm</span>
                     <span className="text-[10px] text-[#A89886]">| Individual</span>
                   </div>
 

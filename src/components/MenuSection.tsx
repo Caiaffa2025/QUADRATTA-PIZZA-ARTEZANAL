@@ -98,7 +98,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
               Escolha sua <span className="text-[#C49A6C]">Quadratta</span> artesanal
             </h2>
             <p className="text-xs sm:text-sm text-[#A89886] mt-1 max-w-xl">
-              Todas as pizzas são individuais no tamanho exclusivo de 9 x 25 cm, com massa fininha assada na hora e ingredientes de alta qualidade.
+              Todas as pizzas são individuais no tamanho exclusivo de 10 x 25 cm, com massa fininha assada na hora e ingredientes de alta qualidade.
             </p>
           </div>
 
