@@ -16,27 +16,27 @@ const FLYERS: FlyerItem[] = [
   {
     id: 'pizza-aberta',
     title: 'Encarte 1: Pizza Aberta na Caixa',
-    subtitle: 'Massa Fininha, Recheio Generoso & Cardápio',
+    subtitle: 'Massa Fininha, Recheio Generoso & Cardápio Oficial',
     image: '/assets/aistudio/IMG_1457_43f83bca.png',
     badge: 'Pizza Pronta & Forno na Pedra',
-    description: 'Visualização completa da pizza individual alongada 10 x 25 cm recém-saída do forno, com cardápio oficial, ingredientes e contatos.',
+    description: 'Visualização completa da pizza individual alongada 10 x 25 cm conforme o print do banner oficial, com os 6 sabores tradicionais, ingredientes nobres e contatos.',
     highlights: [
       'Foto real da pizza assada e gratinada',
       'Cardápio dos 6 sabores tradicionais',
-      'Destaque para o formato 10 x 25 cm',
+      'Tamanho no banner: 10 x 25 cm (tamanho ideal)',
       'WhatsApp direto: (11) 98493-7529',
     ],
   },
   {
     id: 'caixa-kraft',
     title: 'Encarte 2: Caixa Kraft Quadratta',
-    subtitle: 'Embalagem Exclusiva 10x25cm & Identidade',
+    subtitle: 'Embalagem Exclusiva 10x25cm & Identidade Oficial',
     image: '/assets/aistudio/IMG_1458_04ba9bba.jpeg',
     badge: 'Design da Caixa Exclusiva',
-    description: 'Apresentação da caixa kraft térmica alongada desenvolvida para conservar o calor e a crocância durante o trajeto do delivery.',
+    description: 'Apresentação da caixa kraft térmica alongada desenvolvida nas medidas de 10 x 25 cm conforme o print do banner para conservar o calor e a crocância durante o delivery.',
     highlights: [
       'Caixa kraft reforçada e sustentável',
-      'Encaixe perfeito da pizza de 10 x 25 cm',
+      'Encaixe perfeito da pizza de 10 x 25 cm (conforme banner oficial)',
       'Marca Quadratta Pizza Artesanal',
       'Atendimento Vila Andrade e Morumbi',
     ],
@@ -209,6 +209,12 @@ export const FlyerShowcaseSection: React.FC = () => {
                     {/* Background checkerboard subtle hint */}
                     <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#F59E0B_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
 
+                    {/* Top Left Dimension Badge - Tamanho Ideal no Banner */}
+                    <div className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-[#14110E]/95 backdrop-blur-md px-3 py-1.5 rounded-xl border border-[#F59E0B]/70 text-white shadow-xl flex items-center gap-2 z-10">
+                      <span className="text-[#F59E0B] font-display font-extrabold text-xs sm:text-sm">10 × 25 cm</span>
+                      <span className="text-[10px] sm:text-xs text-[#E6D5C3]">· Tamanho Ideal no Banner</span>
+                    </div>
+
                     <img
                       src={flyer.image}
                       alt={flyer.title}
@@ -233,6 +239,15 @@ export const FlyerShowcaseSection: React.FC = () => {
                     <p className="text-xs sm:text-sm text-[#C5B7A7] leading-relaxed">
                       {flyer.description}
                     </p>
+
+                    {/* Dimension Callout Strip */}
+                    <div className="text-[11px] text-[#A89886] bg-[#14110E] p-2.5 rounded-xl border border-[#261E18] flex items-center justify-between">
+                      <span className="flex items-center gap-1.5">
+                        <Sparkles className="w-3.5 h-3.5 text-[#F59E0B] shrink-0" />
+                        <span>Formato no banner: <strong className="text-[#F59E0B]">10 x 25 cm</strong></span>
+                      </span>
+                      <span className="text-[#22C55E] font-semibold text-[10px] hidden sm:inline">Tamanho Ideal Oficial</span>
+                    </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 border-t border-[#261E18]">
                       {flyer.highlights.map((item, hIdx) => (
@@ -330,6 +345,9 @@ export const FlyerShowcaseSection: React.FC = () => {
                     {activeFlyerForLightbox.subtitle}
                   </p>
                 </div>
+                <span className="text-[11px] font-bold text-[#F59E0B] bg-[#1C1612] px-2.5 py-1 rounded-lg border border-[#F59E0B]/50 shrink-0 hidden md:inline">
+                  10 × 25 cm (Tamanho Ideal no Banner)
+                </span>
               </div>
 
               {/* Zoom & Action Controls */}
