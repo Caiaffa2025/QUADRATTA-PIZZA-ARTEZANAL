@@ -79,7 +79,9 @@ export const Footer: React.FC = () => {
 
         {/* Bottom copyright */}
         <div className="pt-6 border-t border-[#1C1612] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] sm:text-xs text-[#6B5A4E]">
-          <p className="text-center sm:text-left">© {new Date().getFullYear()} Quadratta Pizza Artesanal. Todos os direitos reservados.</p>
+          <p className="text-center sm:text-left">
+            © {new Date().getFullYear()} Quadratta Pizza Artesanal. Todos os direitos reservados. / Agencia Stc Mobile / Sydney Caiaffa.
+          </p>
           <div className="flex items-center gap-4">
             <span className="hidden sm:inline">10 x 25 cm · Feita com paixão</span>
             <button
